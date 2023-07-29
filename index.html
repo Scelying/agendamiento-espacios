@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calendar">
+    <div class="header">
+      <button id="prevBtn">&lt;</button>
+      <h1 id="monthYear"></h1>
+      <button id="nextBtn">&gt;</button>
+    </div>
+    <div class="weekdays">
+      <div>Dom</div>
+      <div>Lun</div>
+      <div>Mar</div>
+      <div>Mié</div>
+      <div>Jue</div>
+      <div>Vie</div>
+      <div>Sáb</div>
+    </div>
+    <div class="days" id="daysContainer"></div>
+  </div>
+
+  <div class="event-card" id="eventCard">
+    <h2>Eventos del día:</h2>
+    <div id="eventList"></div>
+    <button id="addEventBtn">Agregar Evento</button>
+  </div>
+
+  <script src="calendar.js"></script>
+</body>
+</html>

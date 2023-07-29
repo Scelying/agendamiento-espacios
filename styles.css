@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .calendar {
+    max-width: 600px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 8px 1px lightgrey;
+    border-radius: 8px;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+  
+  .weekdays div {
+    width: 14%;
+    text-align: center;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .day {
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+  
+  .day.today {
+    background-color: #f0f0f0;
+    font-weight: 800;
+  }
+  
+  .day.event {
+    background-color: #a0d8ff;
+  }
+  
+  .event-card {
+    display: none;
+    max-width: 400px;
+    margin: 30px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 2px 2px 8px 1px lightgrey;
+    border-radius: 8px; 
+  }
+  
+  .event-card h2 {
+    margin-top: 0;
+  }
+  
+  .event-card p {
+    margin: 5px 0;
+  }
