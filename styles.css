@@ -1,72 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=League+Spartan:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .calendar {
-    max-width: 600px;
-    margin: 30px auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 2px 2px 8px 1px lightgrey;
-    border-radius: 8px;
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .weekdays {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-  }
-  
-  .weekdays div {
-    width: 14%;
-    text-align: center;
-  }
-  
-  .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    margin-top: 5px;
-  }
-  
-  .day {
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    padding: 5px;
-  }
-  
-  .day.today {
-    background-color: #f0f0f0;
-    font-weight: 800;
-  }
-  
-  .day.event {
-    background-color: #a0d8ff;
-  }
-  
-  .event-card {
-    display: none;
-    max-width: 400px;
-    margin: 30px auto;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-shadow: 2px 2px 8px 1px lightgrey;
-    border-radius: 8px; 
-  }
-  
-  .event-card h2 {
-    margin-top: 0;
-  }
-  
-  .event-card p {
-    margin: 5px 0;
-  }
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+}
+
+.calendar {
+  max-width: 600px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 1px lightgrey;
+  border-radius: 8px;
+}
+
+.header {
+  font-family: 'League Spartan', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weekdays {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.weekdays div {
+  width: 14%;
+  text-align: center;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.day {
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.day:hover {
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
+}
+
+.day.active {
+  background-color: #f9f9f9;
+  box-shadow: 1px 1px 1px 1px rgb(231, 231, 231);
+  transform: translateY(-2px);
+  transition: box-shadow 0.1s ease-out;
+}
+
+.day.today {
+  font-weight: 800;
+  color: red;
+}
+
+.day.event {
+  background-color: #f7ffa0;
+}
+
+/* Estilo para los días vacíos */
+.empty-day {
+  background-color: #f1f1f1; /* Color de fondo para los días vacíos */
+  border: 1px solid #ddd; /* Borde alrededor de los días vacíos */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default; /* Cambiar el cursor al pasar por encima */
+  user-select: none; /* Evitar la selección de texto al hacer clic y arrastrar */
+}
+
+
+.event-card {
+  display: none;
+  max-width: 400px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 1px lightgrey;
+  border-radius: 8px;
+}
+
+.event-card h2 {
+  margin-top: 0;
+}
+
+.event-card p {
+  margin: 5px 0;
+}
+
+#addEventBtn {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 10px;
+  margin: 10px auto;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #ff6b6b;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#addEventBtn:hover {
+  background-color: #dd0a0a;
+  transform: translateY(-2px);
+}
